@@ -1,0 +1,189 @@
+% !Mode:: "TeX:UTF-8"
+%% 请使用 XeLaTeX 编译本文. 适用于 TeX Live 2015 . 本模板的更新下载地址: http://aff.whu.edu.cn/huangzh/
+\documentclass[forlib]{WHUPhd}  % 选项 [forprint]: 交付打印时, 加上此选项, 以消除链接文字之彩色, 避免打印偏淡.
+                                      % 选项 [forlib]: 提交给图书馆的电子版, 需要加上选项 forlib, 以消除空白页和彩色链接.
+% \usepackage{CJKfntef}
+%%%%%%%%%%%%%%%%%%%%%=== 参考文献=== %%%%%%%%%%%%%%%%%%%%%
+% \bibliographystyle{abbrv}        % 参考文献样式,  plain,unsrt,alpha,abbrv 等等
+% \bibliographystyle{bibdata/gbt7714-2005-plain}
+\bibliographystyle{bibdata/gbt7714-numerical}
+% \bibliographystyle{bibdata/gbt7714-author-year}
+% \bibliographystyle{bibdata/ustcthesis-numerical}
+\usepackage[numbers]{bibdata/gbt7714}
+\usepackage{natbib}
+
+\usepackage{bm}
+
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{arydshln}
+\usepackage{color}
+
+\usepackage{booktabs}
+
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\renewcommand{\algorithmicrequire}{ \textbf{输入:}} %Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{ \textbf{输出:}}
+
+
+
+% \usepackage[linesnumbered,ruled]{algorithm2e}
+
+
+
+\definecolor{mred}{RGB}{255,114,89}
+\definecolor{mblue}{RGB}{102, 102, 255}
+
+
+\definecolor{blue-1}{RGB}{31,139,191}
+\definecolor{red-1}{RGB}{219,93,93}
+
+
+
+\newcommand{\myparagraph}[1]{{\vspace{6pt}\noindent\heiti #1\vspace{6pt}}}
+
+\newcommand{\note}[1]{\textcolor{red}{【备注:#1】}}
+
+
+\setlength{\bibsep}{0.5ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+%%%%%%%-------------------------------------------------
+
+\fenleihao{TP309}  % 分类号:《中国图书资料分类法》的类号. 必填. 要根据自己的学科方向填写!!
+\miji{公开}                % 密级
+\UDC{}               %《国际十进制分类法UDC》的类号. 选填.
+\bianhao{10486}  % 学校编号, 10486是武汉大学的编号. 不用改动.
+
+\title{博士论文题目-封面}
+\titleh{博士论文题目-header}
+\Etitle{Phd thesis title} % 英文题目
+\author{xxx}
+\Eauthor{Name}            %作者英文名
+\Csupervisor{xxx\quad 教授}        %指导教师中文名、职称
+\Esupervisor{Prof.~xxx}     %指导教师英文名、职称
+\Cmajor{xxx}                   %  学科、专业名称
+\Emajor{xxx}% 专业英文名
+\Cspeciality{xxxx}                     % 研究方向
+\Especiality{xxxx}   % 研究方向
+\Schoolname{xxx} %学院英文名. 不确定的话, 请看一下自己学院的网页上是怎么写的. 别搞错了!
+\date{二〇二一年五月一日}               %  要注意和英文日期一致!!
+\Edate{October 1, 2021}                 % 英文封面日期
+
+
+
+
+%-----------------------------------------------------------------------------
+\pdfbookmark[0]{封面}{title}         % 封面页加到 pdf 书签
+
+\maketitle
+
+%-----------------------------------------------------------------------------
+\include{metafile/frontmatter}    % 加入英文封面, 论文创新点, 等等目录之前的部分.
+\frontmatter
+\pagenumbering{Roman}               % 正文之前的页码用大写罗马字母编号.
+
+\pagestyle{oldplain}\cleardoublepage
+\include{metafile/midmatter}      % 加入中英文摘要.
+
+%---把目录加入到书签---%%%%%%%%%%%%%%
+\pdfbookmark[0]{目录}{toc}%%%%%%%%%%%%
+\pagestyle{oldplain}
+\tableofcontents
+\pagestyle{oldplain}\cleardoublepage
+\newpage  \pagestyle{fancy} \fancyfancy
+%------------------------------------------------------------------------------
+% \include{metafile/figuresdes}      % 加入图检索.
+
+
+%------------------------------------------------------------------------------
+% \include{metafile/tabledes}      % 加入表检索.
+
+
+
+
+%------------------------------------------------------------------------------
+
+
+
+%------------------------------------------------------------------------------
+\mainmatter %% 以下是正文
+\baselineskip=20pt  % 正文行距为 20 磅
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%=====================================================================%%%
+\include{content/xulun}  
+
+
+%%%=====================================================================%%%
+\include{content/fundation}   
+  
+
+%%%=====================================================================%%%
+
+%%%=====================================================================%%%
+\include{content/outlook}   
+
+%%%=====================================================================%%%
+
+
+
+
+%%%------------附录. 不需要的话, 可以删除.--------
+% \appendix
+
+% \chapter{测试1}
+
+% 测试
+
+% \chapter{测试2}
+
+% 测试
+
+% \chapter{测试3}
+
+% 测试
+
+
+
+
+%%%%%%%%%%%%%%%%%=== 参考文献 ==%%%%%%%%%%%%%%%%%%%
+\cleardoublepage\phantomsection
+
+\addcontentsline{toc}{chapter}{参考文献}
+
+{\zihao{5}
+\bibliography{bibdata/bibtex}
+% \bibliography{data/sec1/sec1}
+}
+
+
+
+\backmatter
+
+\include{metafile/backmatter} %%%致谢、作品列表 ．
+
+\cleardoublepage
+\end{document}
+

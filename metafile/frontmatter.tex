@@ -1,0 +1,139 @@
+% !Mode:: "TeX:UTF-8"
+
+%%% 说明: 此部分需要自己填写的内容:  论文创新点.
+
+%%% ``郑重申明'' 和``论文使用授权协议书'' 分别在 statement.tex 和 protocol.tex 中, 无需改动.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% -------------  英文封面 (无需改动)-------------   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\renewcommand{\baselinestretch}{1.5}  %下文的行距
+% \vspace*{0.5cm}
+
+
+\begin{center}{\zihao{3} 
+A Dissertation Submitted to \\
+Academic Degrees Evaluation Committee of Wuhan University for \\
+The Degree of Doctor of Philosophy in Computer Science
+\par}\end{center}
+
+\vspace*{2cm}
+
+\begin{center}{\zihao{2}\bf \the\Etitle \par}\end{center}
+
+\vfill
+
+\begin{center}
+\zihao{4}
+\begin{tabular}{ r l }
+ Candidate:      &  {\sc \the\Eauthor}      \\
+ Supervisor:     &  {\sc \the\Esupervisor}   \\
+ Major:          & \the\Emajor  \\
+ Speciality:     & \the\Especiality
+\end{tabular}
+
+\vspace*{2cm}
+\begin{center}
+  \iflib % 向图书馆提交电子文档, 使用黑白校徽.
+  \includegraphics[height=4cm]{whu.eps}       %%  黑白的. 很小, 只有 10k.
+  \else
+  \ifprint % 文档打印, 使用黑白校徽.
+  \includegraphics[height=4cm]{whu.eps}       %%  黑白的.
+  \else
+  \includegraphics[height=4cm]{whulogo.eps} %%  彩色的.
+  \fi
+  \fi
+\end{center}
+
+
+\zihao{-2}
+\the\Schoolname\\
+{\sc Wuhan University}
+
+\vspace*{1.0cm}
+
+\the\Edate
+
+\end{center}
+%%%%%%%--判断是否需要空白页-----------------------------
+  \iflib
+  \else
+  \newpage
+  \thispagestyle{empty}
+  \cleardoublepage
+  \fi
+%%%%%%%-------------------------------------------------
+{\pagestyle{empty}
+%%%--- 加入``郑重声明'' --- %%%%%%%%%%%%%%%%%
+\input{metafile/statement}%%%%%%%%%%%%%%%%%
+%%% ---加入``武汉大学学位论文使用授权协议书'' ---  %%%%%%
+\input{metafile/protocol}%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ------------------- 论文创新点----------------------- %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage\vspace*{20pt}\thispagestyle{empty}
+\begin{center}{\zihao{-2}\heiti 论文创新点}\end{center}
+\par\vspace*{30pt}
+\baselineskip=20pt
+
+
+
+本文的主要创新点包括以下几个部分：
+xxxxxxxxxxxxxxxxxxxxx
+x
+
+x
+x
+x
+x
+x
+
+x
+x
+x
+xxxxxxxxxxxxxx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%--请勿删除以下内容 -------------------------------%
+%%%%%%%--判断是否需要空白页-----------------------------%
+  \iflib
+  \let\cleardoublepage\clearpage
+  \else
+  \newpage
+  \thispagestyle{empty}
+  \cleardoublepage
+  \fi
+%%%%%%%---------------------------------------------------%
+
+
+
